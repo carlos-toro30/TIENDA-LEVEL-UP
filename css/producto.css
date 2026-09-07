@@ -1,0 +1,397 @@
+:root {
+    --azul-principal: #1f3a5f;
+    --azul-hover: #162d49;
+    --gris-fondo: #f4f6f8;
+    --gris-borde: #dfe3e8;
+    --gris-texto: #667085;
+    --gris-oscuro: #344054;
+    --blanco: #ffffff;
+    --verde: #198754;
+    --rojo: #dc3545;
+}
+
+
+/* CONTENEDOR */
+
+.producto-container {
+    width: 100%;
+}
+
+
+/* ENCABEZADO */
+
+.producto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.producto-header h2 {
+    margin: 0 0 6px;
+    color: var(--gris-oscuro);
+}
+
+.producto-header p {
+    margin: 0;
+    color: var(--gris-texto);
+}
+
+
+/* BOTÓN NUEVO PRODUCTO */
+
+.btn-nuevo-producto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn-nuevo-producto:hover {
+    background-color: var(--azul-hover);
+    color: var(--blanco);
+}
+
+
+/* CONTENEDOR TABLA */
+
+.producto-table-container {
+    background-color: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+
+    border-radius: 8px;
+
+    overflow-x: auto;
+}
+
+
+/* TABLA */
+
+.producto-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+
+/* CABECERA */
+
+.producto-table thead {
+    background-color: var(--gris-fondo);
+}
+
+.producto-table th {
+    padding: 15px;
+
+    text-align: left;
+
+    color: var(--gris-oscuro);
+
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+
+/* CELDAS */
+
+.producto-table td {
+    padding: 15px;
+
+    color: var(--gris-texto);
+
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+.producto-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.producto-table tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+
+/* ESTADO */
+
+.producto-estado {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.producto-activo {
+    background-color: #e8f5ee;
+    color: var(--verde);
+}
+
+.producto-inactivo {
+    background-color: #fdecec;
+    color: var(--rojo);
+}
+
+
+/* ACCIONES */
+
+.producto-acciones {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* BOTÓN EDITAR */
+
+.btn-editar-producto,
+.btn-eliminar-producto {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+.btn-editar-producto {
+    background-color: #eef3f8;
+    color: var(--azul-principal);
+}
+
+.btn-editar-producto:hover {
+    background-color: #dfe8f1;
+}
+
+
+/* BOTÓN ELIMINAR */
+
+.btn-eliminar-producto {
+    background-color: #fdecec;
+    color: var(--rojo);
+}
+
+.btn-eliminar-producto:hover {
+    background-color: #f9d6d6;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+
+.producto-form-container {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+
+/* FORMULARIO */
+
+.producto-form {
+    width: 100%;
+}
+
+
+/* GRUPOS */
+
+.producto-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+/* LABEL */
+
+.producto-form .form-group label {
+    font-weight: 600;
+    color: var(--gris-oscuro);
+    margin-bottom: 8px;
+}
+
+
+/* INPUTS Y SELECT */
+
+.producto-form input,
+.producto-form select,
+.producto-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: border-color 0.2s;
+}
+
+
+/* TEXTAREA */
+
+.producto-form textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+
+/* FOCUS */
+
+.producto-form input:focus,
+.producto-form select:focus,
+.producto-form textarea:focus {
+    border-color: var(--azul-principal);
+}
+
+
+/* PLACEHOLDER */
+
+.producto-form input::placeholder,
+.producto-form textarea::placeholder {
+    color: #98a2b3;
+}
+
+
+/* BOTONES */
+
+.producto-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--gris-borde);
+}
+
+
+/* GUARDAR */
+
+.btn-guardar-producto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+
+    border: none;
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-guardar-producto:hover {
+    background-color: var(--azul-hover);
+}
+
+
+/* CANCELAR */
+
+.btn-cancelar-producto {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 11px 20px;
+
+    background-color: var(--gris-fondo);
+    color: var(--gris-oscuro);
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn-cancelar-producto:hover {
+    background-color: #e9ecef;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .producto-form-container {
+        padding: 20px;
+    }
+
+    .producto-form-buttons {
+        flex-direction: column;
+    }
+
+    .btn-guardar-producto,
+    .btn-cancelar-producto {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .producto-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .producto-table {
+        min-width: 800px;
+    }
+
+}

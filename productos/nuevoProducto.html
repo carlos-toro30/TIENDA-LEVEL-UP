@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevo Producto - Administrador</title>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/producto.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Level-UP Gamer</h2>
+                <span>Administrador</span>
+            </div>
+
+            <nav class="menu">
+
+                <!-- DASHBOARD -->
+                <a href="../admin.html" class="menu-item">
+                    <i class="bi bi-house-door"></i>
+                    <span>Dashboard</span>
+                </a>
+
+
+                <!-- PRODUCTOS -->
+                <div class="menu-section">
+
+                    <p class="section-title">
+                        <i class="bi bi-box-seam"></i>
+                        Productos
+                    </p>
+
+                    <a href="nuevoProducto.html" class="menu-item active">
+                        <i class="bi bi-plus-circle"></i>
+                        Nuevo producto
+                    </a>
+
+                    <a href="editarProducto.html">
+                        <i class="bi bi-pencil-square"></i>
+                        Editar producto
+                    </a>
+
+                    <a href="mostrarProducto.html">
+                        <i class="bi bi-box-seam"></i>
+                        Mostrar productos
+                    </a>
+
+                </div>
+
+
+                <!-- USUARIOS -->
+                <div class="menu-section">
+
+                    <p class="section-title">
+                        <i class="bi bi-people"></i>
+                        Usuarios
+                    </p>
+
+                    <a href="../usuarios/nuevoUsuario.html">
+                        <i class="bi bi-person-plus"></i>
+                        Nuevo usuario
+                    </a>
+
+                    <a href="../usuarios/editarUsuario.html">
+                        <i class="bi bi-person-gear"></i>
+                        Editar usuario
+                    </a>
+
+                    <a href="../usuarios/mostrarUsuario.html">
+                        <i class="bi bi-person-lines-fill"></i>
+                        Mostrar usuarios
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+            <div class="sidebar-bottom">
+
+                <a href="../index.html">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Cerrar sesión
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="header">
+
+                <div>
+                    <h1>Nuevo producto</h1>
+                    <p>Registra un nuevo producto en la tienda.</p>
+                </div>
+
+            </header>
+
+
+            <!-- FORMULARIO -->
+            <section class="producto-container">
+
+                <div class="producto-header">
+
+                    <div>
+                        <h2>Registrar producto</h2>
+                        <p>Completa los datos solicitados.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="producto-form-container">
+
+                    <form class="producto-form">
+
+                        <!-- NOMBRE -->
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre del producto
+                            </label>
+
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del producto"
+                                required>
+
+                        </div>
+
+
+                        <!-- DESCRIPCIÓN -->
+                        <div class="form-group">
+
+                            <label for="descripcion">
+                                Descripción
+                            </label>
+
+                            <textarea id="descripcion" name="descripcion" rows="4"
+                                placeholder="Ingrese una descripción del producto" required></textarea>
+
+                        </div>
+
+
+                        <!-- CATEGORÍA -->
+                        <div class="form-group">
+
+                            <label for="categoria">
+                                Categoría
+                            </label>
+
+                            <select id="categoria" name="categoria" required>
+
+                                <option value="">
+                                    Seleccione una categoría
+                                </option>
+
+                                <option value="perifericos">
+                                    Periféricos
+                                </option>
+
+                                <option value="audio">
+                                    Audio
+                                </option>
+
+                                <option value="monitores">
+                                    Monitores
+                                </option>
+
+                                <option value="componentes">
+                                    Componentes
+                                </option>
+
+                                <option value="accesorios">
+                                    Accesorios
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PRECIO -->
+                        <div class="form-group">
+
+                            <label for="precio">
+                                Precio
+                            </label>
+
+                            <input type="number" id="precio" name="precio" placeholder="Ej: 49990" min="0" required>
+
+                        </div>
+
+
+                        <!-- STOCK -->
+                        <div class="form-group">
+
+                            <label for="stock">
+                                Stock
+                            </label>
+
+                            <input type="number" id="stock" name="stock" placeholder="Ingrese la cantidad disponible"
+                                min="0" required>
+
+                        </div>
+
+
+                        <!-- ESTADO -->
+                        <div class="form-group">
+
+                            <label for="estado">
+                                Estado
+                            </label>
+
+                            <select id="estado" name="estado" required>
+
+                                <option value="activo">
+                                    Activo
+                                </option>
+
+                                <option value="inactivo">
+                                    Inactivo
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- BOTONES -->
+                        <div class="producto-form-buttons">
+
+                            <a href="mostrarProducto.html" class="btn-cancelar-producto">
+                                Cancelar
+                            </a>
+
+                            <button type="submit" class="btn-guardar-producto">
+
+                                <i class="bi bi-plus-circle"></i>
+                                Registrar producto
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

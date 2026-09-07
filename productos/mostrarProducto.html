@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mostrar Productos - Administrador</title>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/producto.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Level-UP Gamer</h2>
+                <span>Administrador</span>
+            </div>
+
+            <nav class="menu">
+
+                <!-- DASHBOARD -->
+                <a href="../admin.html" class="menu-item">
+                    <i class="bi bi-house-door"></i>
+                    <span>Dashboard</span>
+                </a>
+
+
+                <!-- PRODUCTOS -->
+                <div class="menu-section">
+
+                    <p class="section-title">
+                        <i class="bi bi-box-seam"></i>
+                        Productos
+                    </p>
+
+                    <a href="nuevoProducto.html">
+                        <i class="bi bi-plus-circle"></i>
+                        Nuevo producto
+                    </a>
+
+                    <a href="editarProducto.html">
+                        <i class="bi bi-pencil-square"></i>
+                        Editar producto
+                    </a>
+
+                    <a href="mostrarProducto.html" class="menu-item active">
+                        <i class="bi bi-box-seam"></i>
+                        Mostrar productos
+                    </a>
+
+                </div>
+
+
+                <!-- USUARIOS -->
+                <div class="menu-section">
+
+                    <p class="section-title">
+                        <i class="bi bi-people"></i>
+                        Usuarios
+                    </p>
+
+                    <a href="../usuarios/nuevoUsuario.html">
+                        <i class="bi bi-person-plus"></i>
+                        Nuevo usuario
+                    </a>
+
+                    <a href="../usuarios/editarUsuario.html">
+                        <i class="bi bi-person-gear"></i>
+                        Editar usuario
+                    </a>
+
+                    <a href="../usuarios/mostrarUsuario.html">
+                        <i class="bi bi-person-lines-fill"></i>
+                        Mostrar usuarios
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+            <div class="sidebar-bottom">
+
+                <a href="../index.html">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Cerrar sesión
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="header">
+
+                <div>
+                    <h1>Productos</h1>
+                    <p>Administración y listado de productos.</p>
+                </div>
+
+            </header>
+
+
+            <!-- LISTADO DE PRODUCTOS -->
+            <section class="producto-container">
+
+                <div class="producto-header">
+
+                    <div>
+                        <h2>Productos registrados</h2>
+                        <p>Consulta los productos disponibles en la tienda.</p>
+                    </div>
+
+                    <a href="nuevoProducto.html" class="btn-nuevo-producto">
+
+                        <i class="bi bi-plus-lg"></i>
+                        Nuevo producto
+
+                    </a>
+
+                </div>
+
+
+                <!-- TABLA -->
+                <div class="producto-table-container">
+
+                    <table class="producto-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <!-- PRODUCTO 1 -->
+                            <tr>
+
+                                <td>001</td>
+
+                                <td>
+                                    <strong>Teclado Mecánico RGB</strong>
+                                </td>
+
+                                <td>Periféricos</td>
+
+                                <td>$49.990</td>
+
+                                <td>25</td>
+
+                                <td>
+                                    <span class="producto-estado producto-activo">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td class="producto-acciones">
+
+                                    <a href="editarProducto.html" class="btn-editar-producto" title="Editar producto">
+
+                                        <i class="bi bi-pencil-square"></i>
+
+                                    </a>
+
+                                    <button type="button" class="btn-eliminar-producto"
+                                        onclick="eliminarProducto('Teclado Mecánico RGB')" title="Eliminar producto">
+
+                                        <i class="bi bi-trash"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PRODUCTO 2 -->
+                            <tr>
+
+                                <td>002</td>
+
+                                <td>
+                                    <strong>Mouse Gamer RGB</strong>
+                                </td>
+
+                                <td>Periféricos</td>
+
+                                <td>$29.990</td>
+
+                                <td>40</td>
+
+                                <td>
+                                    <span class="producto-estado producto-activo">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td class="producto-acciones">
+
+                                    <a href="editarProducto.html" class="btn-editar-producto" title="Editar producto">
+
+                                        <i class="bi bi-pencil-square"></i>
+
+                                    </a>
+
+                                    <button type="button" class="btn-eliminar-producto"
+                                        onclick="eliminarProducto('Mouse Gamer RGB')" title="Eliminar producto">
+
+                                        <i class="bi bi-trash"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PRODUCTO 3 -->
+                            <tr>
+
+                                <td>003</td>
+
+                                <td>
+                                    <strong>Audífonos Gamer</strong>
+                                </td>
+
+                                <td>Audio</td>
+
+                                <td>$39.990</td>
+
+                                <td>12</td>
+
+                                <td>
+                                    <span class="producto-estado producto-activo">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td class="producto-acciones">
+
+                                    <a href="editarProducto.html" class="btn-editar-producto" title="Editar producto">
+
+                                        <i class="bi bi-pencil-square"></i>
+
+                                    </a>
+
+                                    <button type="button" class="btn-eliminar-producto"
+                                        onclick="eliminarProducto('Audífonos Gamer')" title="Eliminar producto">
+
+                                        <i class="bi bi-trash"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PRODUCTO 4 -->
+                            <tr>
+
+                                <td>004</td>
+
+                                <td>
+                                    <strong>Monitor Gamer 24"</strong>
+                                </td>
+
+                                <td>Monitores</td>
+
+                                <td>$149.990</td>
+
+                                <td>8</td>
+
+                                <td>
+                                    <span class="producto-estado producto-inactivo">
+                                        Inactivo
+                                    </span>
+                                </td>
+
+                                <td class="producto-acciones">
+
+                                    <a href="editarProducto.html" class="btn-editar-producto" title="Editar producto">
+
+                                        <i class="bi bi-pencil-square"></i>
+
+                                    </a>
+
+                                    <button type="button" class="btn-eliminar-producto"
+                                        onclick="eliminarProducto('Monitor Gamer 24 pulgadas')"
+                                        title="Eliminar producto">
+
+                                        <i class="bi bi-trash"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function eliminarProducto(nombre) {
+
+            const confirmar = confirm(
+                "¿Está seguro de que desea eliminar el producto " + nombre + "?"
+            );
+
+            if (confirmar) {
+
+                alert(
+                    "Producto eliminado correctamente."
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
