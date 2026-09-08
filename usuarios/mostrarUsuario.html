@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mostrar Usuarios - Administrador</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/usuario.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <!--  MENÚ LATERAL  -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Level-UP Gamer</h2>
+                <span>Administrador</span>
+            </div>
+
+
+            <nav class="menu">
+
+                <!-- DASHBOARD -->
+
+                <a href="../admin.html" class="menu-item">
+
+                    <i class="bi bi-house-door"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <!-- PRODUCTOS -->
+
+                <div class="menu-section">
+
+                    <p class="section-title">
+
+                        <i class="bi bi-box-seam"></i>
+
+                        Productos
+
+                    </p>
+
+
+                    <a href="../productos/nuevoProducto.html">
+
+                        <i class="bi bi-plus-circle"></i>
+
+                        Nuevo producto
+
+                    </a>
+
+
+                    <a href="../productos/editarProducto.html">
+
+                        <i class="bi bi-pencil-square"></i>
+
+                        Editar producto
+
+                    </a>
+
+
+                    <a href="../productos/mostrarProducto.html">
+
+                        <i class="bi bi-box-seam"></i>
+
+                        Mostrar productos
+
+                    </a>
+
+                </div>
+
+
+                <!-- USUARIOS -->
+
+                <div class="menu-section">
+
+                    <p class="section-title">
+
+                        <i class="bi bi-people"></i>
+
+                        Usuarios
+
+                    </p>
+
+
+                    <a href="nuevoUsuario.html">
+
+                        <i class="bi bi-person-plus"></i>
+
+                        Nuevo usuario
+
+                    </a>
+
+
+                    <a href="editarUsuario.html">
+
+                        <i class="bi bi-person-gear"></i>
+
+                        Editar usuario
+
+                    </a>
+
+
+                    <a href="mostrarUsuario.html" class="menu-item active">
+
+                        <i class="bi bi-person-lines-fill"></i>
+
+                        Mostrar usuarios
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-bottom">
+
+                <a href="../index.html">
+
+                    <i class="bi bi-box-arrow-left"></i>
+
+                    Cerrar sesión
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO  -->
+
+        <main class="main-content">
+
+
+            <!-- ENCABEZADO -->
+
+            <header class="header">
+
+                <div>
+
+                    <h1>Usuarios</h1>
+
+                    <p>
+                        Administración de usuarios registrados.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- LISTADO -->
+
+            <section class="usuario-container">
+
+
+                <!-- ENCABEZADO DE LA SECCIÓN -->
+
+                <div class="usuario-header">
+
+                    <div>
+
+                        <h2>Usuarios registrados</h2>
+
+                        <p>
+                            Consulta y administra los usuarios
+                            registrados en la tienda.
+                        </p>
+
+                    </div>
+
+
+                    <a href="nuevoUsuario.html" class="btn-nuevo-usuario">
+
+                        <i class="bi bi-person-plus"></i>
+
+                        Nuevo usuario
+
+                    </a>
+
+                </div>
+
+
+                <!-- TABLA -->
+
+                <div class="usuario-table-container">
+
+                    <table class="usuario-table">
+
+
+                        <!-- CABECERA -->
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>Nombre completo</th>
+
+                                <th>Correo</th>
+
+                                <th>Teléfono</th>
+
+                                <th>Rol</th>
+
+                                <th>Estado</th>
+
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <!-- DATOS -->
+
+                        <tbody>
+
+
+                            <!-- USUARIO 1 -->
+
+                            <tr>
+
+                                <td>001</td>
+
+                                <td>
+                                    Valentín Caceres
+                                </td>
+
+                                <td>
+                                    valentin@email.com
+                                </td>
+
+                                <td>
+                                    +56 9 1234 5678
+                                </td>
+
+                                <td>
+
+                                    <span class="rol rol-usuario">
+
+                                        Usuario
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <span class="estado estado-activo">
+
+                                        Activo
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="usuario-acciones">
+
+
+                                        <!-- EDITAR -->
+
+                                        <a href="editarUsuario.html" class="btn-editar-usuario" title="Editar usuario">
+
+                                            <i class="bi bi-pencil-square"></i>
+
+                                        </a>
+
+
+                                        <!-- ELIMINAR -->
+
+                                        <button type="button" class="btn-eliminar-usuario" title="Eliminar usuario"
+                                            onclick="eliminarUsuario('Juan Pérez')">
+
+                                            <i class="bi bi-trash"></i>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- USUARIO 2 -->
+
+                            <tr>
+
+                                <td>002</td>
+
+                                <td>
+                                    Kevin Perez
+                                </td>
+
+                                <td>
+                                    kevin@email.com
+                                </td>
+
+                                <td>
+                                    +56 9 8765 4321
+                                </td>
+
+                                <td>
+
+                                    <span class="rol rol-usuario">
+
+                                        Usuario
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <span class="estado estado-activo">
+
+                                        Activo
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="usuario-acciones">
+
+
+                                        <a href="editarUsuario.html" class="btn-editar-usuario" title="Editar usuario">
+
+                                            <i class="bi bi-pencil-square"></i>
+
+                                        </a>
+
+
+                                        <button type="button" class="btn-eliminar-usuario" title="Eliminar usuario"
+                                            onclick="eliminarUsuario('María González')">
+
+                                            <i class="bi bi-trash"></i>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- USUARIO 3 -->
+
+                            <tr>
+
+                                <td>003</td>
+
+                                <td>
+                                    Carlos Toro
+                                </td>
+
+                                <td>
+                                    carlos@email.com
+                                </td>
+
+                                <td>
+                                    +56 9 1122 3344
+                                </td>
+
+                                <td>
+
+                                    <span class="rol rol-admin">
+
+                                        Administrador
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <span class="estado estado-activo">
+
+                                        Activo
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="usuario-acciones">
+
+
+                                        <a href="editarUsuario.html" class="btn-editar-usuario" title="Editar usuario">
+
+                                            <i class="bi bi-pencil-square"></i>
+
+                                        </a>
+
+
+                                        <button type="button" class="btn-eliminar-usuario" title="Eliminar usuario"
+                                            onclick="eliminarUsuario('Carlos Soto')">
+
+                                            <i class="bi bi-trash"></i>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- USUARIO 4 -->
+
+                            <tr>
+
+                                <td>004</td>
+
+                                <td>
+                                    Ana Martínez
+                                </td>
+
+                                <td>
+                                    ana@email.com
+                                </td>
+
+                                <td>
+                                    +56 9 5566 7788
+                                </td>
+
+                                <td>
+
+                                    <span class="rol rol-usuario">
+
+                                        Usuario
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <span class="estado estado-inactivo">
+
+                                        Inactivo
+
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="usuario-acciones">
+
+
+                                        <a href="editarUsuario.html" class="btn-editar-usuario" title="Editar usuario">
+
+                                            <i class="bi bi-pencil-square"></i>
+
+                                        </a>
+
+
+                                        <button type="button" class="btn-eliminar-usuario" title="Eliminar usuario"
+                                            onclick="eliminarUsuario('Ana Martínez')">
+
+                                            <i class="bi bi-trash"></i>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!--JAVASCRIPT -->
+
+    <script>
+
+        function eliminarUsuario(nombre) {
+
+            const confirmar = confirm(
+                "¿Está seguro de que desea eliminar al usuario " + nombre + "?"
+            );
+
+
+            if (confirmar) {
+
+                alert(
+                    "Usuario eliminado correctamente."
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+
+
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #ddd;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 15px;
+}
+
+
+
+
+.logo {
+    padding: 10px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.logo h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.logo span {
+    font-size: 12px;
+    color: #777;
+}
+
+
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+
+.menu a {
+    display: block;
+
+    padding: 11px 12px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background-color: #eeeeee;
+}
+
+
+
+
+.menu-item.active {
+    background-color: #e8e8e8;
+
+    font-weight: bold;
+}
+
+
+
+
+.menu-section {
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #555;
+
+    padding: 8px 12px;
+
+    margin-bottom: 3px;
+}
+
+
+
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid #ddd;
+
+    padding-top: 15px;
+}
+
+.sidebar-bottom a {
+    display: block;
+
+    padding: 11px;
+
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.sidebar-bottom a:hover {
+    background-color: #eeeeee;
+}
+
+
+
+
+.main-content {
+    flex: 1;
+
+    padding: 35px 45px;
+}
+
+
+
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+.notification {
+    font-size: 20px;
+}
+
+
+
+
+.dashboard {
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+.dashboard h2 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.card-icon {
+    font-size: 30px;
+}
+
+.card h3 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+.card a {
+    margin-top: auto;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* ICONOS DEL MENÚ */
+
+.menu a i {
+    width: 22px;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.section-title i {
+    margin-right: 7px;
+}
+
+
+/* ICONO DE NOTIFICACIÓN */
+
+.notification i {
+    font-size: 20px;
+}
+
+
+/* ICONOS DE LAS TARJETAS */
+
+.card-icon i {
+    font-size: 30px;
+}
+
+
+/* ICONO DE CERRAR SESIÓN */
+
+.sidebar-bottom i {
+    margin-right: 8px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .admin-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+}
