@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sesionAdmin = { nombre: 'Administrador Level UP', email: email, rol: 'ADMIN' };
                 localStorage.setItem('usuarioSesion', JSON.stringify(sesionAdmin));
                 alert('¡Bienvenido Administrador!');
-                window.location.href = 'principal.html';
+                window.location.href = 'admin.html';
                 return;
             }
 
