@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Level-Up Gamer</title>
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @media (min-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <a href="PaginaMadre.html" class="navbar-brand">👾 Level-Up Gamer</a>
+            
+            <nav class="navbar-nav" style="display: flex; list-style: none; margin: 0; padding: 0;">
+
+                <a href="principal.html" class="nav-link active">Home</a>
+                <a href="producto.html" class="nav-link">Productos</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="blog.html" class="nav-link">Blogs</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="navbar-nav" style="display: flex;">
+                <a href="carro.html" class="nav-link" style="text-decoration: none; cursor: pointer;">
+                    🛒 Cart (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div style="text-align: right; max-width: 1100px; margin: 0 auto 20px auto;">
+
+            <a href="inicio.html" style="color: #FFFFFF;">Iniciar sesión</a> | 
+            <a href="Registro.html" style="color: #FFFFFF;">Registrar usuario</a>
+
+        </div>
+        <div class="blog-card" style="max-width: 1100px; margin: 0 auto 40px auto; padding: 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 280px;">
+                <h1 style="font-family: 'Orbitron', sans-serif; font-size: 32px; color: #FFFFFF; margin-top: 0;">TIENDA ONLINE</h1>
+                <p>Sean bienvenidos a nuestra tienda online, donde encontrarás los mejores productos para gamers.</p>
+                <a href="producto.html" class="blog-btn">⬇ ver productos</a>
+            </div>
+            <div style="flex: 1; min-width: 280px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7srIsZpbAnaalw8XJAX-JezpqvuWIB-cGHD6WOnTDKg&s=10" alt="Tienda Online">
+            </div>
+        </div>
+
+        <div class="Blog product-grid">
+            
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_781313-MLA99856414215_112025-O.webp" alt="Product Title">
+                <div class="blog-content">
+                    <h3>PlayStation 5</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Consola PlayStation 5 de 512 GB version disco</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$750.990</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(1)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD1ZDwxhzUfGq8paGoApwmgPiOis6RBjxFZHngjepbVA&s=10" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Xbox Series X</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Consola Xbox Series X de 1 TB</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$675.990</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(2)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKOHMhkk6X1auyqTEpVjVB1BsUYc2KxqdKxOIQ5AdfZA&s=10" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Nintendo Switch 2</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Consola Nintendo Switch 2 de 512 GB</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$450.990</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(3)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://static.myshop.cl/fotos/1/2/3/5/4/1_1774235419000.png" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Mouse Inalambrico</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Mouse inalambrico Logitech G502</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$84.990</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(4)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS0RUHJNpb7sN-T9hix0NtyzbjGGL8AUZJtbR1EVTHkN49HpS6tRr54HWCeRQVqxtv_G8wfFkl4WZ4rbjPEV4skZjeBrPqGK5d0XWdrMBZK6-4Fy4gizdAYfQ" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Tarjeta Grafica</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Tarjeta de Video NVIDIA RTX 5090 32g Gaming</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$1.200.000</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(5)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://dz019gex1wne1.cloudfront.net/fit-in/700x700/filters:fill(FFFFFF):quality(90):format(webp)/_img_productos/audifonos-gamer-razer-kraken-v4-x-minecraft-foto1.jpg" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Audifonos Gamer</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Audifonos Razer Kraken V4 X Minecraft</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$129.990</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(6)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTLD42PNOxd_QXzjp46gKkgBie3xOg1SldesxdyS_MO4Ae-AIWJXm7UwItpQFMGotGEDQjJOzwiRoE_vkLWgCEt7d-Ig5PJLhgeabHPgXUWRcKI86-w9Qmkh_SwJYr5EV9QMl8Bji8WAZg&usqp=CAc" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Monitor Gamer</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Monitor Samsung G5 34", Max 165Hz</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$00.00</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(7)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR7-jNzbM-uX1tGWnuDFKRbdBUMxbtdddp4lDKcS0nlmvVvlE50MHDUXlYIFxco3wg-PMse9y3PIGbg1PL8EQ1qOtOhsnbVLwAzMzEj5y8" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Steam Deck</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span>Valve Steam Deck OLED 512 GB</span>
+                        <span style="color: #39FF14; font-weight: bold; font-size: 18px;">$00.00</span>
+                    </div>
+                    <button class="blog-btn" onclick="addToCart(8)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <p style="margin: 0;">Level-Up Gamer</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px;">[VISA] [MC] [AMEX]</p>
+            </div>
+
+            <div>
+                <a href="#" style="color: #D3D3D3;">Category X</a> |
+                <a href="#" style="color: #D3D3D3;">Category Y</a> |
+                <a href="#" style="color: #D3D3D3;">Category Z</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="font-size: 12px;">Stay in Touch! Join our Newsletter:</span>
+                <input type="email" placeholder="Enter Email">
+                <button class="blog-btn" style="border: none; cursor: pointer;">Subscribe</button>
+            </div>
+        </div>
+        <p style="margin-top: 30px; margin-bottom: 0; color: #D3D3D3;">&copy; 2026 Level-Up Gamer. Desafía tus límites.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
