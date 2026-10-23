@@ -1,0 +1,103 @@
+const image = (label, background = '111827') =>
+  `https://placehold.co/640x420/${background}/39ff14?text=${encodeURIComponent(label)}`;
+
+export const products = [
+  {
+    id: 1,
+    name: 'PlayStation 5',
+    category: 'Consolas',
+    price: 750990,
+    description: 'Consola PlayStation 5 de 512 GB, versión con disco.',
+    image: image('PlayStation 5', '111827'),
+  },
+  {
+    id: 2,
+    name: 'Xbox Series X',
+    category: 'Consolas',
+    price: 675990,
+    description: 'Consola Xbox Series X de 1 TB para jugar en 4K.',
+    image: image('Xbox Series X', '172554'),
+  },
+  {
+    id: 3,
+    name: 'Nintendo Switch 2',
+    category: 'Consolas',
+    price: 450990,
+    description: 'Consola híbrida Nintendo Switch 2 con 512 GB.',
+    image: image('Nintendo Switch 2', '312e81'),
+  },
+  {
+    id: 4,
+    name: 'Mouse Logitech G502',
+    category: 'Accesorios',
+    price: 84990,
+    description: 'Mouse inalámbrico gamer con sensor de alta precisión.',
+    image: image('Mouse Gamer', '3f1d5a'),
+  },
+  {
+    id: 5,
+    name: 'Silla Gamer GX2000',
+    category: 'Mobiliario',
+    price: 164990,
+    description: 'Silla ergonómica con soporte lumbar y reposabrazos ajustables.',
+    image: image('Silla Gamer', '4c1d95'),
+  },
+  {
+    id: 6,
+    name: 'Tarjeta gráfica RTX 5090',
+    category: 'Componentes',
+    price: 4549990,
+    description: 'Tarjeta de video NVIDIA para equipos de alto rendimiento.',
+    image: image('RTX 5090', '581c87'),
+  },
+  {
+    id: 7,
+    name: 'Monitor Samsung G5',
+    category: 'Periféricos',
+    price: 329990,
+    description: 'Monitor curvo de 34 pulgadas con frecuencia de 165 Hz.',
+    image: image('Monitor 165Hz', '164e63'),
+  },
+  {
+    id: 8,
+    name: 'Steam Deck OLED',
+    category: 'Consolas',
+    price: 699990,
+    description: 'Consola portátil Steam Deck OLED de 512 GB.',
+    image: image('Steam Deck OLED', '365314'),
+  },
+  {
+    id: 9,
+    name: 'Teclado HyperX Alloy Origins',
+    category: 'Accesorios',
+    price: 89990,
+    description: 'Teclado mecánico RGB con switches para gaming competitivo.',
+    image: image('Teclado RGB', '7c2d12'),
+  },
+  {
+    id: 10,
+    name: 'Audífonos Razer Kraken',
+    category: 'Accesorios',
+    price: 129990,
+    description: 'Audífonos gaming 7.1 con micrófono retráctil.',
+    image: image('Audífonos 7.1', '7f1d1d'),
+  },
+  {
+    id: 11,
+    name: 'Mando inalámbrico',
+    category: 'Accesorios',
+    price: 59990,
+    description: 'Control inalámbrico compatible con PC y consolas.',
+    image: image('Mando Gamer', '1e3a8a'),
+  },
+  {
+    id: 12,
+    name: 'Polera Level-Up Edition',
+    category: 'Merchandising',
+    price: 19990,
+    description: 'Polera oficial Level-Up para completar tu setup gamer.',
+    image: image('Level-Up Edition', '3f3f46'),
+  },
+];
+
+export const categories = ['Todas', ...new Set(products.map((product) => product.category))];
