@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
-import { categories } from '../data/products';
 import { ProductCard } from './ProductCard';
 
 export function ProductGrid({ products, onAdd }) {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('Todas');
+  const categories = ['Todas', ...new Set(products.map((product) => product.category))];
 
   const filteredProducts = useMemo(() => {
     const normalizedSearch = search.trim().toLowerCase();

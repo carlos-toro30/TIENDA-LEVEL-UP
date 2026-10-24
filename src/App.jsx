@@ -99,10 +99,21 @@ function BlogPage({ onNavigate }) {
 
 export function App() {
   const [view, setView] = useState('home');
+  const [catalogProducts, setCatalogProducts] = useState(() => readStorage('productos-react', products));
   const [cart, setCart] = useState(() => readStorage('carrito-react', []));
   const [discountRate, setDiscountRate] = useState(() => readStorage('descuento-react', 0));
   const [user, setUser] = useState(() => readStorage('usuario-react', null));
   const [notice, setNotice] = useState(null);
+
+  const [adminUsers, setAdminUsers] = useState(() => readStorage('usuarios-react', []));
+
+  useEffect(() => {
+    localStorage.setItem('productos-react', JSON.stringify(catalogProducts));
+  }, [catalogProducts]);
+
+  useEffect(() => {
+    localStorage.setItem('usuarios-react', JSON.stringify(adminUsers));
+  }, [adminUsers]);
 
   useEffect(() => {
     localStorage.setItem('carrito-react', JSON.stringify(cart));
@@ -186,9 +197,39 @@ export function App() {
     setNotice({ type: 'success', text: 'Compra procesada. ¡Gracias por elegir Level-Up Gamer!' });
   };
 
+  const addAdminProduct = (product) => {
+    setCatalogProducts((current) => [...current, { ...product, id: Date.now() }]);
+    setNotice({ type: 'success', text: 'Producto creado correctamente.' });
+  };
+
+  const updateAdminProduct = (product) => {
+    setCatalogProducts((current) => current.map((item) => item.id === product.id ? product : item));
+    setNotice({ type: 'success', text: 'Producto actualizado correctamente.' });
+  };
+
+  const deleteAdminProduct = (productId) => {
+    setCatalogProducts((current) => current.filter((item) => item.id !== productId));
+    setNotice({ type: 'success', text: 'Producto eliminado correctamente.' });
+  };
+
+  const addAdminUser = (newUser) => {
+    setAdminUsers((current) => [...current, { ...newUser, id: Date.now() }]);
+    setNotice({ type: 'success', text: 'Usuario creado correctamente.' });
+  };
+
+  const updateAdminUser = (updatedUser) => {
+    setAdminUsers((current) => current.map((item) => item.id === updatedUser.id ? { ...item, ...updatedUser, password: updatedUser.password || item.password } : item));
+    setNotice({ type: 'success', text: 'Usuario actualizado correctamente.' });
+  };
+
+  const deleteAdminUser = (userId) => {
+    setAdminUsers((current) => current.filter((item) => item.id !== userId && item.email !== userId));
+    setNotice({ type: 'success', text: 'Usuario eliminado correctamente.' });
+  };
+
   const content = (() => {
     switch (view) {
-      case 'catalog': return <section className="container page-section"><ProductGrid products={products} onAdd={addProduct} /></section>;
+      case 'catalog': return <section className="container page-section"><ProductGrid products={catalogProducts} onAdd={addProduct} /></section>;
       case 'cart': return <section className="container page-section"><CartView items={cart} discountRate={discountRate} onRemove={removeProduct} onApplyCoupon={applyCoupon} onCheckout={checkout} onNavigate={setView} /></section>;
       case 'login': return <section className="container page-section"><LoginForm onSubmit={login} onNavigate={setView} /></section>;
       case 'register': return <section className="container page-section"><RegisterForm onSubmit={register} onNavigate={setView} /></section>;
@@ -196,7 +237,7 @@ export function App() {
       case 'about': return <AboutPage />;
       case 'blog': return <BlogPage onNavigate={setView} />;
       case 'admin': return user?.role === 'ADMIN'
-        ? <section className="container page-section"><AdminDashboard productCount={products.length} user={user} onNavigate={setView} /></section>
+        ? <AdminDashboard products={catalogProducts} users={adminUsers} onNavigate={setView} onLogout={logout} onAddProduct={addAdminProduct} onUpdateProduct={updateAdminProduct} onDeleteProduct={deleteAdminProduct} onAddUser={addAdminUser} onUpdateUser={updateAdminUser} onDeleteUser={deleteAdminUser} />
         : <section className="container page-section"><LoginForm onSubmit={login} onNavigate={setView} /></section>;
       case 'home':
       default:

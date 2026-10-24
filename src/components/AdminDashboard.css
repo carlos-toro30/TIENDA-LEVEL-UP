@@ -1,0 +1,381 @@
+.admin-dashboard {
+  margin: 0 calc(50% - 50vw);
+  background: #f5f5f5;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+.admin-dashboard .admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-dashboard .sidebar {
+  width: 240px;
+  min-height: 100vh;
+  padding: 25px 15px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-dashboard .logo {
+  padding: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-dashboard .logo h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.admin-dashboard .logo span {
+  color: #777;
+  font-size: 12px;
+}
+
+.admin-dashboard .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-dashboard .menu a,
+.admin-dashboard .sidebar-bottom a {
+  display: block;
+  padding: 11px 12px;
+  color: #333;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.admin-dashboard .menu a:hover,
+.admin-dashboard .sidebar-bottom a:hover {
+  background: #eee;
+}
+
+.admin-dashboard .menu-item.active {
+  background: #e8e8e8;
+  font-weight: bold;
+}
+
+.admin-dashboard .menu-section {
+  margin-top: 20px;
+}
+
+.admin-dashboard .section-title {
+  margin: 0 0 3px;
+  padding: 8px 12px;
+  color: #555;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.admin-dashboard .menu a i,
+.admin-dashboard .section-title i {
+  width: 22px;
+  margin-right: 8px;
+}
+
+.admin-dashboard .sidebar-bottom {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.admin-dashboard .main-content {
+  flex: 1;
+  padding: 35px 45px;
+}
+
+.admin-dashboard .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-dashboard .header h1 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.admin-dashboard .header p,
+.admin-dashboard .descripcion,
+.admin-dashboard .card p {
+  color: #777;
+}
+
+.admin-dashboard .header p {
+  font-size: 14px;
+}
+
+.admin-dashboard .notification {
+  font-size: 20px;
+}
+
+.admin-dashboard .dashboard {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.admin-dashboard .dashboard h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.admin-dashboard .descripcion {
+  margin-bottom: 30px;
+}
+
+.admin-dashboard .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.admin-dashboard .card {
+  min-height: 180px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.admin-dashboard .card-icon {
+  font-size: 30px;
+}
+
+.admin-dashboard .card h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.admin-dashboard .card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.admin-dashboard .card a {
+  margin-top: auto;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.admin-dashboard .card a:hover {
+  text-decoration: underline;
+}
+
+.admin-dashboard .menu button,
+.admin-dashboard .sidebar-bottom button {
+  width: 100%;
+  padding: 11px 12px;
+  border: 0;
+  background: transparent;
+  color: #333;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-dashboard .menu button:hover,
+.admin-dashboard .sidebar-bottom button:hover {
+  background: #eee;
+}
+
+.admin-dashboard .menu button i,
+.admin-dashboard .sidebar-bottom button i {
+  display: inline-block;
+  width: 22px;
+  margin-right: 8px;
+}
+
+.admin-dashboard .cards button,
+.admin-dashboard .admin-primary,
+.admin-dashboard .admin-back {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  font-weight: 700;
+}
+
+.admin-dashboard .cards button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.admin-dashboard .admin-management {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.admin-dashboard .management-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-dashboard .management-heading h2 {
+  margin-bottom: .4rem;
+}
+
+.admin-dashboard .management-heading p {
+  color: #777;
+}
+
+.admin-dashboard .admin-table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.admin-dashboard .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-dashboard .admin-table th,
+.admin-dashboard .admin-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.admin-dashboard .admin-table th {
+  background: #f8f8f8;
+  font-size: 13px;
+}
+
+.admin-dashboard .admin-table td button,
+.admin-dashboard .admin-form-actions button {
+  margin-right: 8px;
+  padding: 7px 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.admin-dashboard .admin-status {
+  color: #287a35;
+  font-weight: 700;
+}
+
+.admin-dashboard .admin-form {
+  max-width: 650px;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.admin-dashboard .admin-form h3 {
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard .admin-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-dashboard .admin-form input,
+.admin-dashboard .admin-form textarea,
+.admin-dashboard .admin-form select {
+  display: block;
+  width: 100%;
+  margin-top: .4rem;
+  padding: .65rem;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.admin-dashboard .admin-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.admin-dashboard .admin-form-actions {
+  margin-top: 1.25rem;
+}
+
+.admin-dashboard .admin-form-actions .admin-primary {
+  border-color: #222;
+  background: #222;
+  color: #fff;
+}
+
+.admin-dashboard .admin-back {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-dashboard .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .admin-dashboard .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard .main-content {
+    padding: 25px;
+  }
+}
+
+/* Identidad visual de la tienda, con una jerarquía propia para administración. */
+.admin-dashboard {
+  background: linear-gradient(135deg, #070b12 0%, #0d1825 100%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.admin-dashboard .admin-container { min-height: calc(100vh - 74px); }
+.admin-dashboard .sidebar { background: rgba(16, 23, 34, 0.96); border-right-color: rgba(40, 169, 255, 0.3); box-shadow: 12px 0 35px rgba(0, 0, 0, 0.18); }
+.admin-dashboard .logo { border-bottom-color: rgba(160, 180, 200, 0.16); }
+.admin-dashboard .logo h2 { color: var(--text); letter-spacing: -0.04em; }
+.admin-dashboard .logo span { color: var(--neon-blue); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.admin-dashboard .menu button, .admin-dashboard .sidebar-bottom button { color: #bdc7d4; }
+.admin-dashboard .menu button:hover, .admin-dashboard .sidebar-bottom button:hover { background: rgba(40, 169, 255, 0.1); color: var(--neon-green); }
+.admin-dashboard .menu button.active { background: rgba(57, 255, 20, 0.12); color: var(--neon-green); box-shadow: inset 3px 0 0 var(--neon-green); }
+.admin-dashboard .section-title { color: var(--neon-blue); letter-spacing: 0.08em; text-transform: uppercase; }
+.admin-dashboard .sidebar-bottom { border-top-color: rgba(160, 180, 200, 0.16); }
+.admin-dashboard .header { border-bottom-color: rgba(160, 180, 200, 0.16); }
+.admin-dashboard .header h1, .admin-dashboard .dashboard h2, .admin-dashboard .admin-management h2 { color: var(--text); letter-spacing: -0.04em; }
+.admin-dashboard .header p, .admin-dashboard .descripcion, .admin-dashboard .admin-management > p { color: var(--muted); }
+.admin-dashboard .notification { color: var(--neon-green); text-shadow: 0 0 14px rgba(57, 255, 20, 0.35); }
+.admin-dashboard .card, .admin-dashboard .admin-form, .admin-dashboard .admin-table-wrap { background: rgba(16, 23, 34, 0.9); border-color: rgba(40, 169, 255, 0.24); color: var(--text); box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.18); }
+.admin-dashboard .card:hover { border-color: rgba(57, 255, 20, 0.55); box-shadow: 0 0 28px rgba(57, 255, 20, 0.08); }
+.admin-dashboard .card-icon { color: var(--neon-blue); text-shadow: 0 0 18px rgba(40, 169, 255, 0.4); }
+.admin-dashboard .card h3, .admin-dashboard .admin-form h3 { color: var(--text); }
+.admin-dashboard .card p, .admin-dashboard .management-heading p { color: var(--muted); }
+.admin-dashboard .cards button, .admin-dashboard .admin-primary, .admin-dashboard .admin-back { background: var(--neon-green); color: #061006; box-shadow: 0 0 18px rgba(57, 255, 20, 0.16); }
+.admin-dashboard .cards button:hover, .admin-dashboard .admin-primary:hover, .admin-dashboard .admin-back:hover { background: #b2ff9f; }
+.admin-dashboard .admin-table th { background: rgba(40, 169, 255, 0.1); color: var(--neon-blue); }
+.admin-dashboard .admin-table th, .admin-dashboard .admin-table td { border-bottom-color: rgba(160, 180, 200, 0.14); }
+.admin-dashboard .admin-table td { color: #d8e0ea; }
+.admin-dashboard .admin-table td button, .admin-dashboard .admin-form-actions button:not(.admin-primary) { border-color: #354456; background: #0d141e; color: #d8e0ea; }
+.admin-dashboard .admin-table td button:hover, .admin-dashboard .admin-form-actions button:not(.admin-primary):hover { border-color: var(--neon-green); color: var(--neon-green); }
+.admin-dashboard .admin-form label { color: #d8e0ea; }
+.admin-dashboard .admin-form input, .admin-dashboard .admin-form textarea, .admin-dashboard .admin-form select { border-color: #354456; background: #0d141e; color: var(--text); }
+.admin-dashboard .admin-form input:focus, .admin-dashboard .admin-form textarea:focus, .admin-dashboard .admin-form select:focus { outline: 0; border-color: var(--neon-green); box-shadow: 0 0 0 0.2rem rgba(57, 255, 20, 0.14); }
+.admin-dashboard .admin-status { color: var(--neon-green); }
