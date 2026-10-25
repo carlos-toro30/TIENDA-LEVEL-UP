@@ -8,7 +8,7 @@ export const products = [
     category: 'Consolas',
     price: 750990,
     description: 'Consola PlayStation 5 de 512 GB, versión con disco.',
-    image: image('PlayStation 5', '111827'),
+    image: 'https://http2.mlstatic.com/D_NQ_NP_781313-MLA99856414215_112025-O.webp'
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const products = [
     category: 'Consolas',
     price: 675990,
     description: 'Consola Xbox Series X de 1 TB para jugar en 4K.',
-    image: image('Xbox Series X', '172554'),
+    image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSyBEd4DuZutFqqOUok_fIY9xUUrTHcBgX3B-ce02kgCpMldWEVlI_8MflEX7Vyq152uYAbteQxbiWRAfHaSopKVNluWo7E',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const products = [
     category: 'Consolas',
     price: 450990,
     description: 'Consola híbrida Nintendo Switch 2 con 512 GB.',
-    image: image('Nintendo Switch 2', '312e81'),
+    image: 'https://www.weplay.cl/pub/media/catalog/product/cache/3f1b140c3c9f36fbf6b01dffb521c246/1/_/1_1745414561000.jpg',
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const products = [
     category: 'Accesorios',
     price: 84990,
     description: 'Mouse inalámbrico gamer con sensor de alta precisión.',
-    image: image('Mouse Gamer', '3f1d5a'),
+    image: 'https://static.myshop.cl/myshop/fotos/1/2/3/5/4/1_1774235427000.png',
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ export const products = [
     category: 'Mobiliario',
     price: 164990,
     description: 'Silla ergonómica con soporte lumbar y reposabrazos ajustables.',
-    image: image('Silla Gamer', '4c1d95'),
+    image: 'https://lubabycas.cl/cdn/shop/files/8eaec2e7-cd21-4821-9f03-e8da453ff6ee-negro-75afcbd8-c959-4a44-a942-6efcda0d48df.jpg?v=1778799864&width=1600',
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ export const products = [
     category: 'Componentes',
     price: 4549990,
     description: 'Tarjeta de video NVIDIA para equipos de alto rendimiento.',
-    image: image('RTX 5090', '581c87'),
+    image: 'https://api.solotodo.com/products/265691/picture/?width=400&height=400',
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ export const products = [
     category: 'Periféricos',
     price: 329990,
     description: 'Monitor curvo de 34 pulgadas con frecuencia de 165 Hz.',
-    image: image('Monitor 165Hz', '164e63'),
+    image: 'https://cl-cenco-pim-resizer.ecomm.cencosud.com/unsafe/adaptive-fit-in/3840x0/filters:quality(75)/prd-cl/product-medias/e978782a-30c3-43cc-9644-fdad5ae3b8d9/MKQWUU2NC8/MKQWUU2NC8-1/1722963038806-MKQWUU2NC8-1-1.jpg',
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ export const products = [
     category: 'Consolas',
     price: 699990,
     description: 'Consola portátil Steam Deck OLED de 512 GB.',
-    image: image('Steam Deck OLED', '365314'),
+    image: 'https://m.media-amazon.com/images/I/71JEmdyt-UL.jpg',
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ export const products = [
     category: 'Accesorios',
     price: 89990,
     description: 'Teclado mecánico RGB con switches para gaming competitivo.',
-    image: image('Teclado RGB', '7c2d12'),
+    image: 'https://cdnx.jumpseller.com/fantech-esports/image/39087135/thumb/960/960?1754504474',
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ export const products = [
     category: 'Accesorios',
     price: 129990,
     description: 'Audífonos gaming 7.1 con micrófono retráctil.',
-    image: image('Audífonos 7.1', '7f1d1d'),
+    image: 'https://media.spdigital.cl/thumbnails/products/1752783816584-MC4_69fec481_thumbnail_512.jpg',
   },
   {
     id: 11,
@@ -88,7 +88,7 @@ export const products = [
     category: 'Accesorios',
     price: 59990,
     description: 'Control inalámbrico compatible con PC y consolas.',
-    image: image('Mando Gamer', '1e3a8a'),
+    image: 'https://afel.cl/cdn/shop/files/stock_pictures2F27372FS07_black.jpg?v=1720899858',
   },
   {
     id: 12,
@@ -96,7 +96,7 @@ export const products = [
     category: 'Merchandising',
     price: 19990,
     description: 'Polera oficial Level-Up para completar tu setup gamer.',
-    image: image('Level-Up Edition', '3f3f46'),
+    image: image('Polera Level-Up', '111827'),
   },
 ];
 

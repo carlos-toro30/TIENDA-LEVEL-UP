@@ -88,7 +88,7 @@ main { flex: 1; }
 .product-card { overflow: hidden; transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
 .product-card:hover { transform: translateY(-4px); border-color: rgba(57, 255, 20, 0.6); box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.26); }
 .product-image-wrapper { position: relative; overflow: hidden; }
-.product-image { display: block; aspect-ratio: 1.45; object-fit: cover; }
+.product-image { display: block; aspect-ratio: 1.05; object-fit: cover; }
 .product-category { position: absolute; top: 0.75rem; left: 0.75rem; padding: 0.25rem 0.55rem; border-radius: 999px; background: rgba(7, 11, 18, 0.82); color: var(--neon-green); font-size: 0.7rem; font-weight: 700; }
 .product-card .card-body { padding: 1.2rem; }
 .product-card .card-title { font-weight: 750; }
